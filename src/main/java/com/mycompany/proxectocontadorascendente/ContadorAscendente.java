@@ -12,6 +12,11 @@ package com.mycompany.proxectocontadorascendente;
 public class ContadorAscendente {
 
     private int valorActual;
+    
+    
+    ContadorAscendente(int valorInicial){
+        this.valorActual=valorInicial;
+    }
 
     /**
      * @return valorActual
@@ -27,6 +32,11 @@ public class ContadorAscendente {
         this.valorActual = valorActual;
     }
 
+    public String toString(String texto){
+        return "O valor actual do noso contador é: "+this.valorActual;
+    }
+    
+    
     public int incrementar() {
         if (this.valorActual < 1000) {
             this.valorActual++;
