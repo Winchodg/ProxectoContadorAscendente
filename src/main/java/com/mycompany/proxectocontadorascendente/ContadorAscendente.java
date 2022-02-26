@@ -40,4 +40,11 @@ public class ContadorAscendente {
         this.valorActual = 0;
     }
 
+    public int cambiarValor(int modificador) {
+        int suma = this.valorActual + modificador;
+        if (suma < 1000) {
+            this.valorActual = suma;
+        }
+        return this.valorActual;
+    }
 }
