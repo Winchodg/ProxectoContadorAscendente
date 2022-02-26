@@ -31,7 +31,7 @@ public class ContadorAscendente {
     public void setValorActual(int valorActual) {
         this.valorActual = valorActual;
     }
-
+    
     public String toString(String texto){
         return "O valor actual do noso contador é: "+this.valorActual;
     }
