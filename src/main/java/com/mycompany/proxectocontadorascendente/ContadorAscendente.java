@@ -36,4 +36,8 @@ public class ContadorAscendente {
         return this.valorActual;
     }
 
+    public void reiniciar() {
+        this.valorActual = 0;
+    }
+
 }
