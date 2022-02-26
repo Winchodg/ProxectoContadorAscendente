@@ -10,5 +10,30 @@ package com.mycompany.proxectocontadorascendente;
  * @author Wences
  */
 public class ContadorAscendente {
-    
+
+    private int valorActual;
+
+    /**
+     * @return valorActual
+     */
+    public int getValorActual() {
+        return valorActual;
+    }
+
+    /**
+     * @param valorActual set valorActual
+     */
+    public void setValorActual(int valorActual) {
+        this.valorActual = valorActual;
+    }
+
+    public int incrementar() {
+        if (this.valorActual < 1000) {
+            this.valorActual++;
+        } else {
+            this.valorActual = 1000;
+        }
+        return this.valorActual;
+    }
+
 }
