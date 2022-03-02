@@ -44,8 +44,7 @@ public class ContadorAscendenteTest {
      */
     @Test
     public void testIncrementarClaseValida() {
-        ContadorAscendente instance = new ContadorAscendente();
-        instance.setValorActual(538);
+        ContadorAscendente instance = new ContadorAscendente(538);
         assertEquals(539,instance.incrementar());
         
     }  
@@ -54,30 +53,45 @@ public class ContadorAscendenteTest {
      */
     @Test
     public void testIncrementarClaseNonValida() {
-        ContadorAscendente instance = new ContadorAscendente();
-        instance.setValorActual(1050);
+        ContadorAscendente instance = new ContadorAscendente(1050);
         assertEquals(1000,instance.incrementar());
         
     } 
     
     /**
-     * Test of testIncrementarClaseValidaValorLimite method, of class ContadorAscendente.
+     * Test of testIncrementarClaseValidaValorLimite1 method, of class ContadorAscendente.
      */
     @Test
-    public void testIncrementarClaseValidaValorLimite() {
-        ContadorAscendente instance = new ContadorAscendente();
-        instance.setValorActual(999);
+    public void testIncrementarClaseValidaValorLimite1() {
+        ContadorAscendente instance = new ContadorAscendente(999);
+        assertEquals(1000,instance.incrementar());
+    } 
+    
+    /**
+     * Test of testIncrementarClaseValidaValorLimite2 method, of class ContadorAscendente.
+     */
+    @Test
+    public void testIncrementarClaseValidaValorLimite2() {
+        ContadorAscendente instance = new ContadorAscendente(-2147483648);
+        assertEquals(-2147483647,instance.incrementar());
+    } 
+    
+    /**
+     * Test of testIncrementarClaseNonValidaValorLimite1 method, of class ContadorAscendente.
+     */
+    @Test
+    public void testIncrementarClaseNonValidaValorLimite1() {
+        ContadorAscendente instance = new ContadorAscendente(1000);
         assertEquals(1000,instance.incrementar());
         
     } 
     
-    /**
-     * Test of testIncrementarClaseValidaValorLimite method, of class ContadorAscendente.
+      /**
+     * Test of testIncrementarClaseNonValidaValorLimite2 method, of class ContadorAscendente.
      */
     @Test
-    public void testIncrementarClaseNonValidaValorLimite() {
-        ContadorAscendente instance = new ContadorAscendente();
-        instance.setValorActual(1000);
+    public void testIncrementarClaseNonValidaValorLimite2() {
+        ContadorAscendente instance = new ContadorAscendente(2147483647);
         assertEquals(1000,instance.incrementar());
         
     } 
